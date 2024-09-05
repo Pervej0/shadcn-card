@@ -33,7 +33,7 @@ const TabCard = ({ item }: Record<string, any>) => {
             position: "absolute",
             bottom: 0,
             left: 0,
-            background: "linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, 0))",
+            background: "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1))",
           }}
           className="absolute w-full h-full left-0 top-0 bg-[rgba(0, 0, 0, .6)]"
         ></div>
@@ -55,9 +55,16 @@ const TabCard = ({ item }: Record<string, any>) => {
             <h1 className="text-2xl text-white font-bold pl-3">
               {item?.title}
             </h1>
-            <div className="flex text-white gap-x-3 mb-4 pl-3">
-              <h1>Image</h1>
-              <h2>World</h2>
+            <div className="flex items-center font-thin text-white gap-x-3 mb-4 pl-3">
+              <div>
+                <Image
+                  src={item.user.avatar}
+                  alt="avatar"
+                  height={40}
+                  width={40}
+                />
+              </div>
+              <h2>{item.user.name}</h2>
             </div>
             <div className="flex justify-between text-white pb-4">
               <div className="px-5">
