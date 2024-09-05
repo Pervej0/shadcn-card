@@ -5,39 +5,22 @@ const TabCard = ({ item }: Record<string, any>) => {
   return (
     <div className="border rounded-lg">
       <h2 className="text-md text-right px-2">0% funded</h2>
-      <div
-        style={{
-          position: "relative",
-          left: "0",
-          right: "0",
-          top: 0,
-          bottom: 0,
-          overflow: "hidden",
-          borderRadius: "10px",
-          height: "450px",
-        }}
-      >
+      <div className="relative left-0 right-0 top-0 bottom-0 overflow-hidden rounded-[10px] h-[450px]">
         <Image
           width={500}
           height={200}
-          style={{ borderRadius: "10px 0px 0px 10px", objectFit: "cover" }}
           objectFit="cover"
           src={item.poster}
           alt="Ocean"
         />
         <div
           style={{
-            width: "100%",
-            height: "100%",
-            margin: "auto",
-            position: "absolute",
-            bottom: 0,
-            left: 0,
             background: "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1))",
           }}
-          className="absolute w-full h-full left-0 top-0 bg-[rgba(0, 0, 0, .6)]"
+          className="absolute w-full h-full left-0 bottom-0 m-auto bg-[linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1))]"
         ></div>
         <div
+          className="w-full h-[80px] absolute bottom-0 left-0 rounded-[10px] bg-black shadow-3xl"
           style={{
             width: "100%",
             height: "80px",
