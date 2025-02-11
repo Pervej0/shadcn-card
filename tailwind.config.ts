@@ -10,6 +10,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        "3xl": "6px -35px 47px 46px rgba(0,0,0, 1)",
+      },
+      backgroundColor: {
+        "bg-shadow": "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1))",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
